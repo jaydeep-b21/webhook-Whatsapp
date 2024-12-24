@@ -68,18 +68,13 @@ def webhook(request):
                         logger.info(f"Received message from {sender}: {message_body} at {dt_object}")
 
                         # Respond to the message
-                        whatsapp_service = WhatsAppService()
-                        success, response = whatsapp_service.send_message_auto(
-                            recipient=sender,
-                            text=message_body,
-                            dt_object=dt_object,
-                        )
-
-                        if success:
-                            logger.info(f"Reply sent successfully to {sender}")
-                        else:
-                            logger.error(
-                                f"Failed to send reply to {sender}. Response: {response}"
+                        Message.objects.create(
+                                sender="Jaydeep",
+                                receiver=sender,
+                                content=message_body,
+                                timestamp=dt_object,
+                                mobile_no=sender,
+                                status="Received"
                             )
             return JsonResponse({"status": "success"})
 
