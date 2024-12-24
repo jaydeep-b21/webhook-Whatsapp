@@ -20,7 +20,7 @@ logger.setLevel(logging.DEBUG)
 
 class WhatsAppService:
     BASE_URL = "https://graph.facebook.com/v21.0/552952211226957/messages"
-    ACCESS_TOKEN = "EAAHwhtJUljUBO6U3cEKqqxMxoWOcgHfmjZC1VuODD9J2dZBmnzUR9Jvq5hVOSrZCeSCjpFotzDQkyahnqS1P0fhm7NhB1bEF4QSg8TnxhvRPBZBgbU4appMv7f39diZBICvFlTtpgD2OP8A2jYuvVj1ZAGqSFNM1EObih9YMTuYA9AYPqaxTEcSBmjm5gcpa7xRShM2NDv7zhz3UD1O9Xm3hNyReof"
+    ACCESS_TOKEN = "EAAHwhtJUljUBO5ZB7cvZCpLFlCmUDgCHgQ4kToslMkGAhkRMCZCqjZAfiHS5X2pmVylmuI1QER079ltB0QEsudTlVLrfXqHXmPFOSezKGQZCcK82gVgFQQKZBvX7NTAYRI60VDTjwZCZAwsLUFiVloF2aZAoq4QhIRpeVRQOsAZCq8iEXQZC0AXxZBOv2Gaf4Qtk6hkAODgDFNLjZBKkvrdZBZAmpbjUqzyBqEZD"
 
     def __init__(self):
         self.headers = {
