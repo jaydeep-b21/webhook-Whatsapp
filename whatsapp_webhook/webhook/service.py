@@ -20,7 +20,7 @@ logger.setLevel(logging.DEBUG)
 
 class WhatsAppService:
     BASE_URL = "https://graph.facebook.com/v21.0/552952211226957/messages"
-    ACCESS_TOKEN = "EAAHwhtJUljUBO8SpNZBrWhCRIj1Wc3NGYEZAyrZBRkSnotEFsEuNNlSKa8OwbCcba7Jk4NscdAEHj8Jx3PF7ZBR8XBOEVehZBw1hfkcMHOmlf68aOrKocwnzEfDH8T7lvB9rDp5pgBofsrkjqnNa3IQ6ZAQOMtrHHvZCZAU9Yco0O8BkfQB6V2pTznW06uhc3zAr8vrDzPfrh2TBzA0H8IHuob2YZBhwZD"
+    ACCESS_TOKEN = "EAAHwhtJUljUBO5oZAVpR3ncAUSH2ehZAv5U8mhV6x5fzZBXWy7XYgQZBvZCUciSHX0sJkZCW8FFrSC7VoUki2Vmh8bsLU7ZBkZASDhZBDTDmGs5KKRM5M4eiyWgUCOFGAp206IHyA2SaMeYJzaFBkauOQyYTFrdWkQMPslMwgK7oGaud3oCmzFeAh1O79dJw8w0cE5Wev8QSvEZCe3yHTzpvYh5ZAKwoOQH"
 
     def __init__(self):
         self.headers = {
@@ -74,13 +74,14 @@ class WhatsAppService:
 
         try:
             # Save the message to the database
-            Message.objects.create(
-                                sender="Jaydeep",
-                                receiver=recipient,
-                                content=text,
-                                timestamp=dt_object,
-                                status="Sent",
-                            )
+            message = Message(
+                sender="Jaydeep",
+                receiver=recipient,
+                content=text,
+                timestamp=dt_object,
+                mobile_no=recipient,
+            )
+            message.save()
             logger.info(f"Message saved to database for recipient {recipient}")
 
             # Send the message

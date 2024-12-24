@@ -70,3 +70,15 @@
 2024-12-24 19:03:54,509 - webhook.service - INFO - Message successfully sent to 919407913083
 2024-12-24 19:33:08,714 - webhook.service - INFO - Sending message to 919407913083: hi
 2024-12-24 19:33:09,218 - webhook.service - ERROR - Failed to send message: {"error":{"message":"Error validating access token: Session has expired on Tuesday, 24-Dec-24 06:00:00 PST. The current time is Tuesday, 24-Dec-24 06:03:08 PST.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"AVdUbnasVvANHeYzJB6EUUO"}}
+2024-12-24 19:34:17,231 - webhook.service - INFO - Sending message to 919407913083: Hey
+2024-12-24 19:34:18,645 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 19:57:22,111 - webhook.service - INFO - Sending message to 919407913083: Hi
+2024-12-24 19:57:23,478 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 20:04:17,313 - webhook.service - INFO - Sending message to 919407913083: Hello
+2024-12-24 20:04:18,433 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 20:08:16,913 - webhook.service - INFO - Sending message to 918265057464: hello
+2024-12-24 20:08:18,137 - webhook.service - INFO - Message successfully sent to 918265057464
+2024-12-24 20:08:48,204 - webhook.service - INFO - Sending message to 918265057464: Hello from desktop
+2024-12-24 20:08:49,167 - webhook.service - INFO - Message successfully sent to 918265057464
+2024-12-24 20:12:37,170 - webhook.service - INFO - Sending message to 918265057464: hello
+2024-12-24 20:12:38,031 - webhook.service - INFO - Message successfully sent to 918265057464
