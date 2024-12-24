@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form button, form select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        #message-response {
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+
+        #status-container {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Messaging Admin Interface</h1>
+
+        <!-- Send Test Message -->
+        <section>
+            <h2>Send a message</h2>
+            <form id="test-message-form" method="post" action="{% url 'reply_to_user' %}">
+                {% csrf_token %} <!-- Include CSRF token for Django security -->
+                
+                <label for="receiver">Receiver:</label>
+                <select id="receiver" name="mobile" required>
+                    <option value="">Select a receiver</option>
+                    {% for message in messages %}
+                        <option value="{{ message.mobile_no }}">{{ message.mobile_no }}</option>
+                    {% endfor %}
+                </select>
+            
+                <label for="content">Message:</label>
+                <textarea id="content" name="msg" required></textarea>
+            
+                <button type="submit" id="send-message-btn">Send Message</button>
+            </form>
+            <div id="message-response"></div>
+        </section>
+
+        <!-- View Messages -->
+        <section>
+            <h2>View messages</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sender</th>
+                        <th>Receiver</th>
+                        <th>Content</th>
+                        <th>Timestamp</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for message in messages %}
+                    <tr>
+                        <td>{{ message.sender }}</td>
+                        <td>{{ message.receiver }}</td>
+                        <td>{{ message.content }}</td>
+                        <td>{{ message.timestamp }}</td>
+                        <td>{{ message.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Monitor Message Status -->
+        <section>
+            <h2>Monitor Message Status</h2>
+            <div id="status-container">
+                <!-- Status updates will be dynamically inserted here -->
+            </div>
+        </section>
+    </div>
+    <script>
+        // JavaScript for handling message send actions
+
+        document.getElementById("send-message-btn").addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+
+            const receiver = document.getElementById("receiver").value;
+            const content = document.getElementById("content").value;
+
+            if (!receiver || !content) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Simulate API Call
+            fetch("{% url 'reply_to_user' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: JSON.stringify({
+                    mobile: receiver,
+                    msg: content
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const responseDiv = document.getElementById("message-response");
+                if (data.status === "success") {
+                    responseDiv.textContent = "Message sent successfully!";
+                } else {
+                    responseDiv.textContent = "Failed to send message.";
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>

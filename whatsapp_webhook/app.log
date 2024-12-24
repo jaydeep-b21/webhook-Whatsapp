@@ -1,0 +1,38 @@
+2024-12-24 10:52:49,118 - webhook.service - INFO - Sending message to 919407913083: Hey
+2024-12-24 10:52:50,236 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:12:32,320 - webhook.service - INFO - Sending message to 919407913083: Hey
+2024-12-24 11:12:33,648 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:36:25,002 - webhook.service - INFO - Sending message to 919407913083: hi
+2024-12-24 11:36:26,832 - webhook.service - INFO - Sending message to 919407913083: hi
+2024-12-24 11:36:27,759 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:36:27,803 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:37:22,885 - webhook.service - INFO - Sending message to 15551708236: hi
+2024-12-24 11:37:23,280 - webhook.service - ERROR - Failed to send message: {"error":{"message":"(#131030) Recipient phone number not in allowed list","type":"OAuthException","code":131030,"error_data":{"messaging_product":"whatsapp","details":"Recipient phone number not in allowed list: Add recipient phone number to recipient list and try again."},"fbtrace_id":"A7-0gs8RimcJ_gtwwSY4oVi"}}
+2024-12-24 11:37:32,765 - webhook.service - INFO - Sending message to 919407913083: Hi
+2024-12-24 11:37:33,893 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:39:07,152 - webhook.service - INFO - Sending message to 919407913083: hi
+2024-12-24 11:39:08,178 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:40:07,230 - webhook.service - INFO - Sending message to 919407913083: hi
+2024-12-24 11:40:08,136 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:40:30,291 - webhook.service - INFO - Sending message to 918265057464: hi
+2024-12-24 11:40:31,067 - webhook.service - INFO - Message successfully sent to 918265057464
+2024-12-24 11:43:21,232 - webhook.service - INFO - Message saved to database for recipient 917744034887
+2024-12-24 11:43:22,046 - webhook.service - INFO - Message successfully sent to 917744034887
+2024-12-24 11:44:57,488 - webhook.service - INFO - Sending message to 917744034887: hi
+2024-12-24 11:44:58,163 - webhook.service - INFO - Message successfully sent to 917744034887
+2024-12-24 11:46:50,697 - webhook.service - INFO - Sending message to 917420822745: hi
+2024-12-24 11:46:51,850 - webhook.service - INFO - Message successfully sent to 917420822745
+2024-12-24 11:49:23,725 - webhook.service - INFO - Message saved to database for recipient 919407913083
+2024-12-24 11:49:24,788 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 11:49:42,561 - webhook.service - INFO - Message saved to database for recipient 917420822745
+2024-12-24 11:49:43,399 - webhook.service - INFO - Message successfully sent to 917420822745
+2024-12-24 11:50:15,817 - webhook.service - INFO - Sending message to 917420822745: hello
+2024-12-24 11:50:16,780 - webhook.service - INFO - Message successfully sent to 917420822745
+2024-12-24 12:02:08,373 - webhook.service - INFO - Message saved to database for recipient 919322015008
+2024-12-24 12:02:09,412 - webhook.service - INFO - Message successfully sent to 919322015008
+2024-12-24 12:18:36,060 - webhook.service - INFO - Sending message to 919407913083: hello
+2024-12-24 12:18:37,302 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 12:18:43,157 - webhook.service - INFO - Sending message to 919407913083: hello
+2024-12-24 12:18:44,166 - webhook.service - INFO - Message successfully sent to 919407913083
+2024-12-24 12:19:21,698 - webhook.service - INFO - Sending message to 919407913083: hello
+2024-12-24 12:19:22,736 - webhook.service - INFO - Message successfully sent to 919407913083
