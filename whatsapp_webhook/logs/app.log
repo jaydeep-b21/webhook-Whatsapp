@@ -1,0 +1,401 @@
+2024-12-25 12:18:55,119 - webhook.views - INFO - Calling send_message function asynchronously
+2024-12-25 12:18:55,119 - webhook.views - INFO - Preparing to send message to: 919407913083
+2024-12-25 12:18:55,120 - webhook.service - INFO - Sending message to 919407913083: hi
+2024-12-25 12:18:55,674 - webhook.service - ERROR - Failed to send message: {"error":{"message":"(#131030) Recipient phone number not in allowed list","type":"OAuthException","code":131030,"error_data":{"messaging_product":"whatsapp","details":"Recipient phone number not in allowed list: Add recipient phone number to recipient list and try again."},"fbtrace_id":"AMMV9xuzzyYh1IBNAyVJGEu"}}
+2024-12-25 12:18:55,675 - webhook.views - ERROR - Failed to send message to 919407913083: {'error': {'message': '(#131030) Recipient phone number not in allowed list', 'type': 'OAuthException', 'code': 131030, 'error_data': {'messaging_product': 'whatsapp', 'details': 'Recipient phone number not in allowed list: Add recipient phone number to recipient list and try again.'}, 'fbtrace_id': 'AMMV9xuzzyYh1IBNAyVJGEu'}}
+2024-12-25 12:19:08,035 - webhook.views - INFO - Calling send_message function asynchronously
+2024-12-25 12:19:08,035 - webhook.views - INFO - Preparing to send message to: 918265057464
+2024-12-25 12:19:08,036 - webhook.service - INFO - Sending message to 918265057464: hi
+2024-12-25 12:19:09,024 - webhook.service - INFO - Message successfully sent to 918265057464
+2024-12-25 12:23:48,125 - webhook.views - INFO - Token Sent: get_verify, Challenge: 1088972377
+2024-12-25 12:23:48,127 - webhook.views - INFO - Webhook verified successfully.
+2024-12-25 12:24:11,432 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Rutvik Jadhav"
+                },
+                "wa_id": "918265057464"
+              }
+            ],
+            "messages": [
+              {
+                "context": {
+                  "from": "918265057464",
+                  "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAEhggODgyODQ1ODhDNDI2QTY1Qjk2RDcwRjYwRjZERDJENTgA"
+                },
+                "from": "918265057464",
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAEhggNUFDNUQ5ODVFQkQxRjc3OUIyN0VFNjIzNTQ3QjUyMjEA",
+                "timestamp": "1735109650",
+                "text": {
+                  "body": "Hello"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:24:11,445 - webhook.views - INFO - Mobile_no 918265057464 already exists. Adding other details.
+2024-12-25 12:24:11,457 - webhook.views - INFO - Received message from 918265057464: Hello at 2024-12-25 06:54:10
+2024-12-25 12:24:16,822 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Jaydeep Biswas"
+                },
+                "wa_id": "919407913083"
+              }
+            ],
+            "messages": [
+              {
+                "from": "919407913083",
+                "id": "wamid.HBgMOTE5NDA3OTEzMDgzFQIAEhggQTAwMUVCMjcyODU1Q0QxQjYzQzREMjQ5MjA0OTkwOTIA",
+                "timestamp": "1735109655",
+                "text": {
+                  "body": "Hello"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:24:16,830 - webhook.views - INFO - Mobile_no 919407913083 already exists. Adding other details.
+2024-12-25 12:24:16,836 - webhook.views - INFO - Received message from 919407913083: Hello at 2024-12-25 06:54:15
+2024-12-25 12:25:55,301 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "statuses": [
+              {
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAERgSRkQ3QjhDNzczRjBFQzlFODU1AA==",
+                "status": "read",
+                "timestamp": "1735109363",
+                "recipient_id": "918265057464"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:26:05,111 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Rutvik Jadhav"
+                },
+                "wa_id": "918265057464"
+              }
+            ],
+            "messages": [
+              {
+                "from": "918265057464",
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAEhggODgyODQ1ODhDNDI2QTY1Qjk2RDcwRjYwRjZERDJENTgA",
+                "timestamp": "1735109366",
+                "text": {
+                  "body": "Hello"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:26:05,128 - webhook.views - INFO - Mobile_no 918265057464 already exists. Adding other details.
+2024-12-25 12:26:05,142 - webhook.views - INFO - Received message from 918265057464: Hello at 2024-12-25 06:49:26
+2024-12-25 12:26:15,156 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "statuses": [
+              {
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAERgSQTM2NzFGRjE4QjMyNDNERDREAA==",
+                "status": "read",
+                "timestamp": "1735109363",
+                "recipient_id": "918265057464"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:26:22,855 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "statuses": [
+              {
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAERgSRDdCNjg2RjEzNjU2OUU3M0EzAA==",
+                "status": "read",
+                "timestamp": "1735109363",
+                "recipient_id": "918265057464"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:26:49,101 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "statuses": [
+              {
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAERgSMUE0RTczQzAyNkU4OTYwNzA4AA==",
+                "status": "read",
+                "timestamp": "1735109363",
+                "recipient_id": "918265057464"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:27:01,809 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "statuses": [
+              {
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAERgSNkUwRTVDM0U1QjUzNEE0QzM1AA==",
+                "status": "read",
+                "timestamp": "1735109363",
+                "recipient_id": "918265057464"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:28:57,953 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Rutvik Jadhav"
+                },
+                "wa_id": "918265057464"
+              }
+            ],
+            "messages": [
+              {
+                "from": "918265057464",
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAEhggQjU5OTVEQUREQzkzNDQ4NTk1QThGQkFBNzlCNDRDODkA",
+                "timestamp": "1735109537",
+                "text": {
+                  "body": "Helllo"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:28:57,971 - webhook.views - INFO - Mobile_no 918265057464 already exists. Adding other details.
+2024-12-25 12:28:57,978 - webhook.views - INFO - Received message from 918265057464: Helllo at 2024-12-25 06:52:17
+2024-12-25 12:29:46,434 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Jaydeep Biswas"
+                },
+                "wa_id": "919407913083"
+              }
+            ],
+            "messages": [
+              {
+                "from": "919407913083",
+                "id": "wamid.HBgMOTE5NDA3OTEzMDgzFQIAEhggODA1MkQxMURCRTY4MDlFNDkzMUNENUQyOTEwNkJGQjcA",
+                "timestamp": "1735109535",
+                "text": {
+                  "body": "Hi"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:29:46,442 - webhook.views - INFO - Mobile_no 919407913083 already exists. Adding other details.
+2024-12-25 12:29:46,448 - webhook.views - INFO - Received message from 919407913083: Hi at 2024-12-25 06:52:15
+2024-12-25 12:29:55,079 - webhook.views - INFO - Received message data: {
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "516347191559718",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551708236",
+              "phone_number_id": "552952211226957"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Rutvik Jadhav"
+                },
+                "wa_id": "918265057464"
+              }
+            ],
+            "messages": [
+              {
+                "from": "918265057464",
+                "id": "wamid.HBgMOTE4MjY1MDU3NDY0FQIAEhggRTU2NDI5M0IyNEU2NUQxOEVBQzJBQzAzM0RFRkQwODUA",
+                "timestamp": "1735109577",
+                "text": {
+                  "body": "Hello"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
+2024-12-25 12:29:55,099 - webhook.views - INFO - Mobile_no 918265057464 already exists. Adding other details.
+2024-12-25 12:29:55,106 - webhook.views - INFO - Received message from 918265057464: Hello at 2024-12-25 06:52:57
