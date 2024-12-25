@@ -9,37 +9,39 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #e9f9e9; /* Light green */
+            color: #1b5e20; /* Dark green */
         }
 
         .container {
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff;
+            background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2 {
-            color: #4CAF50;
+            color: #1b5e20; /* Dark green */
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
+            border: 1px solid #b9e4c9; /* Light green border */
         }
 
         table th, table td {
-            border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
+            border: 1px solid #b9e4c9; /* Light green border */
         }
 
         table th {
-            background-color: #f2f2f2;
+            background-color: #a5d6a7; /* Light green */
+            color: #1b5e20; /* Dark green */
         }
 
         form {
@@ -56,31 +58,36 @@
             width: 100%;
             margin-bottom: 10px;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #b9e4c9; /* Light green border */
             border-radius: 4px;
+            background-color: #f1f8e9; /* Very light green background */
         }
 
         form button {
-            background-color: #4CAF50;
+            background-color: #388e3c; /* Dark green */
             color: white;
             border: none;
             cursor: pointer;
         }
 
         form button:hover {
-            background-color: #45a049;
+            background-color: #2e7d32; /* Slightly darker green for hover */
         }
 
         #message-response {
             margin-top: 10px;
-            color: #4CAF50;
+            color: #388e3c; /* Dark green */
         }
 
         #status-container {
             padding: 10px;
-            background-color: #f9f9f9;
+            background-color: #f1f8e9; /* Very light green */
             border-radius: 4px;
-            border: 1px solid #ddd;
+            border: 1px solid #b9e4c9; /* Light green border */
+        }
+
+        tr:nth-child(even) {
+            background-color: #e9f9e9; /* Alternating row background (light green) */
         }
     </style>
 </head>
@@ -91,23 +98,33 @@
         <!-- Send Test Message -->
         <section>
             <h2>Send a message</h2>
-            <form id="test-message-form" method="post" action="{% url 'reply_to_user' %}">
-                {% csrf_token %} <!-- Include CSRF token for Django security -->
-                
-                <label for="receiver">Receiver:</label>
-                <select id="receiver" name="mobile" required>
-                    <option value="">Select a receiver</option>
-                    {% for message in messages %}
-                        <option value="{{ message.mobile_no }}">{{ message.mobile_no }}</option>
-                    {% endfor %}
-                </select>
-            
+            <form method="post" action="{% url 'reply_to_user' %}">
+                {% csrf_token %}
+                <label for="receiver">Receivers:</label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mobile Number</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for message in mobile_dict %}
+                        <tr>
+                            <td>{{ message.mobile_no }}</td>
+                            <td>
+                                <input type="checkbox" name="mobile" value="{{ message.mobile_no }}">
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
                 <label for="content">Message:</label>
-                <textarea id="content" name="msg" required></textarea>
-            
-                <button type="submit" id="send-message-btn">Send Message</button>
+                <textarea name="msg" required></textarea>
+
+                <button type="submit">Send Message</button>
             </form>
-            <div id="message-response"></div>
         </section>
 
         <!-- View Messages -->
@@ -145,45 +162,5 @@
             </div>
         </section>
     </div>
-    <script>
-        // JavaScript for handling message send actions
-
-        document.getElementById("send-message-btn").addEventListener("click", function (e) {
-            e.preventDefault(); // Prevent the form from submitting normally
-
-            const receiver = document.getElementById("receiver").value;
-            const content = document.getElementById("content").value;
-
-            if (!receiver || !content) {
-                alert("Please fill in all fields.");
-                return;
-            }
-
-            // Simulate API Call
-            fetch("{% url 'reply_to_user' %}", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "X-CSRFToken": "{{ csrf_token }}"
-                },
-                body: JSON.stringify({
-                    mobile: receiver,
-                    msg: content
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                const responseDiv = document.getElementById("message-response");
-                if (data.status === "success") {
-                    responseDiv.textContent = "Message sent successfully!";
-                } else {
-                    responseDiv.textContent = "Failed to send message.";
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-        });
-    </script>
 </body>
 </html>
