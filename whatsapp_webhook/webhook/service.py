@@ -29,8 +29,8 @@ logger.addHandler(console_handler)
 logger = logging.getLogger(__name__)
  
 class WhatsAppService:
-    BASE_URL = "https://graph.facebook.com/v14.0/551602171364742/messages"
-    ACCESS_TOKEN = "EAAPp0EdFjMYBO2bNnJDtEGOoKZB2sCIR1G2ZBupA9mOM2PJAV3OrUDBsapEfsRO4Jtdh1OzK4wG6iWD3NjqkNzjisFj7HEp1H83eUWpqVYTuZBlyzDPAetGZAeqkO7hXz7UCNML6c4S18APW5S4iWKK4P580t1ojGhK34o9ldWe8LEIH3ee1r07cz6syAFLZAZBxJdPH4UGWBwRKuZC0GRVHvcC7iSZB"
+    BASE_URL = "https://graph.facebook.com/v14.0/552952211226957/messages"
+    ACCESS_TOKEN = "EAAHwhtJUljUBO0yFZCSKgsuI79Raj2x6BD1XL1GEhxsBycSnz4iVvMWZBO5hLPJY2Nb96ZAM8Af3ZAZCK7QjgkDk5UakRsVV2dvQtKUvt5bzHZCZCDbc7grLXs3t5y1AVLy0Exl55SNHiMG4pNkZCkm0fkvOUXgraFnOvLafeZAGs9hO5baZCCzmwe7GRMkZAqjGmwycwrgzIEkd3Gqo6xdHdZAj3b3RalvT"
  
     def __init__(self):
         self.headers = {
